@@ -29,3 +29,5 @@ jobs:
           body: 'Your build has failed. Reverting it back.'
           # comma-separated string, send email to
           to: server@mobikasa.com
+          # sender email address
+          from: 'test@mobikasa.net'

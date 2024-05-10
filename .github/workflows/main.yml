@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Hello World
-        run: echo Hello, world! && exit 1
+        run: echo Hello, world!
         
       - name: Send mail
         if: always()
@@ -24,10 +24,13 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           # email subject
-          subject: 'Build Failure Notification'
+          #subject: 'Build Failure Notification'
           # email body as text
-          body: 'Your build has failed. Reverting it back.'
+          #body: 'Your build has failed. Reverting it back.'
           # comma-separated string, send email to
+          subject: Github Actions job '${{ github.workflow }}' of '${{ github.repository }}' Succeded
+          body: The job '${{ github.job }}' in worflow '${{ github.workflow }}' of '${{ github.repository }}' succeded.
+
           to: server@mobikasa.com
           # sender email address
           from: 'test@mobikasa.net'

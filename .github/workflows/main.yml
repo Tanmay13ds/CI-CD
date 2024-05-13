@@ -29,8 +29,8 @@ jobs:
           #body: 'Your build has failed. Reverting it back.'
           # comma-separated string, send email to
           subject: Github Actions job '${{ github.workflow }}' of '${{ github.repository }}' Succeded
-          body: The job '${{ github.job }}' in worflow '${{ github.workflow }}' of '${{ github.repository }}' succeded.
-
+          #body: The job '${{ github.job }}' in worflow '${{ github.workflow }}' of '${{ github.repository }}' succeded.
+          body: ${{ github.event.pull_request.number }} from ${{ github.event.pull_request.head.ref }}.
           to: server@mobikasa.com
           # sender email address
           from: 'test@mobikasa.net'

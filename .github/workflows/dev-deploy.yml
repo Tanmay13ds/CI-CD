@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, dev]
     steps:
       - uses: actions/checkout@v2
       - name: Run a multi-line script

@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Thanks LUIT for giving us this repo for our CICD project!
 
 AMALA-admin
+Run on EC2

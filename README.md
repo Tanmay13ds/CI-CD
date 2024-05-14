@@ -30,3 +30,4 @@ Thanks LUIT for giving us this repo for our CICD project!
 
 AMALA-admin
 Run on EC2
+ok
